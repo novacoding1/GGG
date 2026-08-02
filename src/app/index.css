@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#F8FAFC] text-slate-900 font-sans antialiased overflow-hidden select-none;
+    background-image: 
+      radial-gradient(circle at 50% 50%, rgba(0, 163, 224, 0.05) 0%, transparent 60%),
+      radial-gradient(circle at 80% 20%, rgba(255, 199, 44, 0.08) 0%, transparent 50%);
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #00A3E0;
+  border-radius: 9999px;
+}
+
+/* React Flow Canvas Custom Edge Styling - Kazakh Blue curved 3px lines */
+.react-flow__edge-path {
+  stroke-dasharray: 0;
+  stroke: #00A3E0 !important;
+  stroke-width: 3px !important;
+  transition: stroke 0.3s ease, stroke-width 0.3s ease;
+}
+
+.react-flow__edge:hover .react-flow__edge-path {
+  stroke: #FFC72C !important;
+  stroke-width: 5px !important;
+  filter: drop-shadow(0 0 10px rgba(255, 199, 44, 0.7));
+}
+
+.react-flow__attribution {
+  display: none !important;
+}
+
+/* Kazakh Ornamental Pattern Overlay */
+.kazakh-ornament-pattern {
+  background-color: #F8FAFC;
+  background-image: radial-gradient(#00A3E0 0.75px, transparent 0.75px), radial-gradient(#FFC72C 0.75px, #F8FAFC 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
